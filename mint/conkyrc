@@ -34,18 +34,18 @@ use_spacer = 'right'
 }
 
 conky.text = [[
-${font Arial:size=20}${color Tan1}Raspberry Pi OS 64 ${color #0040FF}
+${font Arial:size=20}${color Tan1}Linux Mint${color #0040FF}
 ${voffset -90}
 ${color #505050}
 ${font}
-${font Arial:bold:size=10}${color Orange}SYSTEM RPi 400${color #0000AA} ${hr 2}
+${font Arial:bold:size=10}${color Orange}SYSTEM${color #0000AA} ${hr 2}
 ${font Montserrat Light:size=8}${color Tan1}OS:${color}${font} ${alignr}${execi 9999 echo '. /etc/os-release ; echo $PRETTY_NAME' | sh} 
 $font${color #505050}$sysname $kernel $alignr $machine
 Frequency ${color #AAAAAA}$alignr${freq_g cpu0}Ghz${color #505050}
 Uptime ${color #AAAAAA}$alignr${uptime}${color #505050}
 File System $alignr${fs_type}
 
-${font Arial:bold:size=15}${color Blue}CPU Cortex-A72${color #0000AA}${hr 2}
+${font Arial:bold:size=15}${color Blue}CPU${color #0000AA}${hr 2}
 $font${color #505050}Temp: $alignr ${color #AAAAAA}${exec /usr/bin/vcgencmd measure_temp | cut -c6-9} C
 $font${color #505050}CPU1  ${color #AAAAAA}${cpu cpu1}%${color #505050} ${cpubar cpu1}
 CPU2  ${color #AAAAAA}${cpu cpu2}%${color #505050} ${cpubar cpu2}
